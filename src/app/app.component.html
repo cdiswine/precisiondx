@@ -1,0 +1,107 @@
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Precision Dx</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#profile" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
+                    <img class="rounded-image profile-image" src="./assets/images/profile-image.jpg"/>
+                    Jane Smith, DVM
+                </a>
+                <ul class="collapse list-unstyled" id="profile">
+                    <li>
+                        <a>Profile</a>
+                    </li>
+                    <li>
+                        <a>Logout</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#my-data" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
+                  <i class="fas fa-database"></i>
+                  <span class="push-left">My data</span>
+                </a>
+                <ul class="collapse list-unstyled" id="my-data">
+                    <li routerLink="/dashboard" routerLinkActive="active">
+                        <a>Dashboard</a>
+                    </li>
+                    <li routerLink="/add-data" routerLinkActive="active">
+                        <a>Data</a>
+                    </li>
+                    <li routerLink="/community" routerLinkActive="active">
+                        <a>Community</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>
+                  <i class="fas fa-chart-line"></i>
+                  <span class="push-left">Explore trends</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                  <i class="fas fa-chart-pie"></i>
+                  <span class="push-left">Create reports</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                  <i class="fas fa-print"></i>
+                  <span class="push-left">Print PDFs</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                  <i class="fas fa-envelope"></i>
+                  <span class="push-left">Send as attachment</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                  <i class="fas fa-cog"></i>
+                  <span class="push-left">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg" id="content-nav-bar">
+                <button type="button" id="sidebarCollapse" class="btn btn-info nav-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-image profile-image" src="./assets/images/profile-image.jpg"/>
+                            Jane Smith, DVM
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">Profile</a>
+                          <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+        </nav>
+
+        <!-- Main router outlet -->
+        <div id="content-body" [@fadeAnimation]="getPage(appOutlet)">
+          <router-outlet #appOutlet="outlet"></router-outlet>
+        </div> 
+  </div>
+</div>
+
+

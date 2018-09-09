@@ -1,0 +1,265 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  border: none;
+  outline: none !important;
+}
+
+.nav-item {
+  color: white;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+.nav-tabs .nav-item {
+  color: rgb(50,50,50);
+  font-size: 1.2em;
+}
+
+.nav-tabs .nav-item .nav-link{
+  padding: 1em;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(29,204,222);
+}
+
+.push-left { margin-left: 15px;}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 15vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: linear-gradient(rgb(29,229,183), rgb(29,204,222));
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -15vw;
+}
+
+#sidebar .sidebar-header {
+    padding: 14.5px;
+    background: rgba(50,50,50,1);
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li {
+  border-bottom: 1px solid rgba(100,100,100,0.4);
+}
+
+#sidebar ul li a {
+    padding: 20px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: rgba(100,100,100,0.2);
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: rgba(100,100,100,0.3);
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content-body {
+  position: relative;
+  margin: 0 auto;
+}
+
+:host {
+  width: 100%;
+  height: 100%;
+  background: #5942f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Bangers;
+  font-size: 2rem;
+  margin: 3rem auto;
+
+  position: absolute;
+}
+
+.navbar {
+  background-color: rgba(75,75,75,1);
+  padding:0;
+  height: 70px;
+}
+
+#content-nav-bar {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+#sidebarCollapse {
+  height: 60px;
+  margin-left: 1.5em;
+}
+
+#content {
+    width: calc(100vw - 15vw);
+    padding: 0;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.rounded-image {
+  border-radius: 50%;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+}
+
+#content.active {
+    width: 100%;
+}
+
+#content-body {
+  background-color: rgb(230,230,230);
+  padding: 6em 4em 4em 4em;
+  min-height: 100vh;
+}
+
+.nav-button {
+  background-color: rgba(75,75,75,1) !important;
+  border-color: rgb(50,50,50) !important;
+}
+
+.content-button {
+  border-radius: 20px;
+  border-color: transparent;
+  background-color: rgb(200,200,200);
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.content-button.active{
+  border-color: transparent !important;
+  background: linear-gradient(rgb(29,229,183), rgb(29,204,222)) !important;
+}
+
+/* Background color styles */
+.blue-green-gradient {
+  background: linear-gradient(rgb(29,229,183), rgb(29,204,222)) !important;
+}
+
+.purple-blue-gradient {
+  background: linear-gradient(rgb(137,157,212), rgb(162,139,212)) !important;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+      width: 0vw;
+    }
+    #sidebar.active {
+        margin-left: -50vw;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 50vw);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
