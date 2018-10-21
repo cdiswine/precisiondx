@@ -1,11 +1,12 @@
 /*
     DEMO STYLE
 */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700';
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
   font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-    background: #fafafa;
+  background:  rgb(29,204,222);
 }
 
 p {
@@ -84,7 +85,7 @@ a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: linear-gradient(rgb(29,229,183), rgb(29,204,222));
+    background-color: rgba(0,0,0,0.6);
     color: #fff;
     transition: all 0.3s;
 }
@@ -123,12 +124,12 @@ a:focus {
 }
 
 #sidebar ul li.active>a,
-a[aria-expanded="true"] {
+a[aria-expanded='true'] {
     color: #fff;
     background: rgba(100,100,100,0.3);
 }
 
-a[data-toggle="collapse"] {
+a[data-toggle='collapse'] {
     position: relative;
 }
 
@@ -152,6 +153,8 @@ ul ul a {
 #content-body {
   position: relative;
   margin: 0 auto;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 :host {
@@ -183,7 +186,7 @@ ul ul a {
 
 #sidebarCollapse {
   height: 60px;
-  margin-left: 1.5em;
+  margin-left: 2px;
 }
 
 #content {
@@ -210,7 +213,7 @@ ul ul a {
 }
 
 #content-body {
-  background-color: rgb(230,230,230);
+  background-color:transparent;
   padding: 6em 4em 4em 4em;
   min-height: 100vh;
 }
@@ -240,6 +243,25 @@ ul ul a {
 
 .purple-blue-gradient {
   background: linear-gradient(rgb(137,157,212), rgb(162,139,212)) !important;
+}
+
+/* ---------------------------------------------------
+   PAGES
+----------------------------------------------------- */
+.page-header {
+  margin-bottom: 1em;
+}
+
+/* ---------------------------------------------------
+   ADD-DATA
+----------------------------------------------------- */
+dropzone > .dropzone.dz-wrapper .dz-message {  padding: 10vh 0 !important;}
+
+/* ---------------------------------------------------
+   CARD
+----------------------------------------------------- */
+.card{
+  background-color: rgba(0,0,0, 0.5);
 }
 
 /* ---------------------------------------------------

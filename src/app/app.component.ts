@@ -1,54 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-/*import * from 'jquery';*/
+declare var $: any;
 
-import {
-  transition,
-  trigger,
-  query,
-  style,
-  animate,
-  group,
-  animateChild
-} from '@angular/animations';
-
-export const fadeAnimation =
-
-    trigger('fadeAnimation', [
-
-        transition( '* => *', [
-
-            query(':enter',
-                [
-                    style({ opacity: 0 })
-                ],
-                { optional: true }
-            ),
-
-            query(':leave',
-                [
-                    style({ opacity: 1 }),
-                    animate('0.2s', style({ opacity: 0 }))
-                ],
-                { optional: true }
-            ),
-
-            query(':enter',
-                [
-                    style({ opacity: 0 }),
-                    animate('0.2s', style({ opacity: 1 }))
-                ],
-                { optional: true }
-            )
-
-        ])
-
-    ]);
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations: [ fadeAnimation ]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = 'app';

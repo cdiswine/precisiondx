@@ -1,93 +1,12 @@
-<div class="row d-flex justify-content-end">
-  <button class="btn btn-info content-button" routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
-  <button class="btn btn-info content-button active" routerLink="/add-data" routerLinkActive="active">Data</button>
-  <button class="btn btn-info content-button" routerLink="/community" routerLinkActive="active">Community</button>
-</div>
-
-<div class="card" >
-  <div class="card-header">
-    Recently Added
+<div class='row d-flex justify-content-end'>
+    <button class='btn btn-info content-button active' routerLink='/add-data' routerLinkActive='active'>Add Data</button>
+    <button class='btn btn-info content-button' routerLink='/recently-added' routerLinkActive='active'>Recently Added</button>
+    <button class='btn btn-info content-button' routerLink='/print' routerLinkActive='active'>Print</button>
+    <button class='btn btn-info content-button' routerLink='/share' routerLinkActive='active'>Share</button>
   </div>
-  <ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">14</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">4</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">0</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">14</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">3</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">9</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">14</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <img class="rounded-image image-icon" src="./assets/images/neutral-bkg.png" alt="" />
-        <div style="display:inline-block;">
-          <h5>Data file</h5>
-          <span>2018-06-13</span>
-        </div>
-      </div>
-      <span class="badge badge-primary badge-pill purple-blue-gradient">18</span>
-    </li>
-  </ul>
-</div>
+
+  <h2 class="page-header">Add Data</h2>
+
+  <dropzone [message]="'Click or drag images here to upload'"></dropzone>
+
+

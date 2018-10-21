@@ -1,7 +1,8 @@
-.image-icon {
-  height:50px;
-  width:50px;
-  background-color: rgb(50,200,200);
-  margin-right: 2em;
-  float:left;
+@import '~dropzone/dist/min/dropzone.min.css';
+
+div.dz-message{
+  padding: 10vh 0 !important;
+  border-radius: 10px;
+  border: 3px dashed #aaa;
+  background-color: #eee;
 }
